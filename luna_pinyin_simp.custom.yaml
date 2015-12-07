@@ -1,0 +1,11 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.9.30
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Mon Dec 07 15:44:27 2015"
+  rime_version: 1.1.2
+patch:
+  speller:
+    algebra:
+      - derive/^([zcs])h/$1/
+      - derive/^([zcs])([^h])/$1h$2/

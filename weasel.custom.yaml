@@ -1,0 +1,14 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.9.30
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Mon Dec 07 16:54:43 2015"
+  rime_version: 1.1.2
+patch:
+  sort: by_weight
+  "style/color_scheme": google
+  "style/display_tray_icon": true
+  "style/font_face": arial
+  "style/font_point": 12
+  "style/horizontal": true
+  "style/inline_preedit": false

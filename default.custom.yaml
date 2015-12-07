@@ -1,0 +1,18 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.9.30
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Mon Dec 07 15:44:27 2015"
+  rime_version: 1.1.2
+patch:
+  menu:
+    page_size: 5
+  schema_list:
+    - {schema: luna_pinyin_simp}
+  switcher:
+    abbreviate_options: true
+    caption: "〔切换输入方案〕"
+    fold_options: true
+    hotkeys: ["Control+grave", "Control+Shift+grave", "Control+`"]
+    option_list_separator: "／"
+    save_options: [full_shape, ascii_punct, simplification, extended_charset]

@@ -1,0 +1,73 @@
+custom_phrase:
+  db_class: stabledb
+  dictionary: ""
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+  user_dict: custom_phrase
+customization: 3039735230
+engine:
+  filters:
+    - simplifier
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - "table_translator@custom_phrase"
+    - script_translator
+key_binder:
+  bindings:
+    - {accept: "Control+Shift+4", toggle: zh_simp, when: always}
+    - {accept: "Control+Shift+dollar", toggle: zh_simp, when: always}
+  import_preset: default
+punctuator:
+  import_preset: default
+recognizer:
+  import_preset: default
+schema:
+  author:
+    - "佛振 <chen.sst@gmail.com>"
+  description: |
+    朙月拼音，簡化字輸出模式。
+    
+  name: "朙月拼音·简化字"
+  schema_id: luna_pinyin_simp
+  version: 0.21.custom.3039735230
+simplifier:
+  option_name: zh_simp
+speller:
+  algebra:
+    - "derive/^([zcs])h/$1/"
+    - "derive/^([zcs])([^h])/$1h$2/"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: full_shape
+    states: ["半角", "全角"]
+  - name: ascii_punct
+    states: ["，。", "，．"]
+  - name: zh_simp
+    reset: 1
+    states: ["漢字", "汉字"]
+translator:
+  dictionary: luna_pinyin
+  preedit_format:
+    - "xform/([nl])v/$1ü/"
+    - "xform/([nl])ue/$1üe/"
+    - "xform/([jqxy])v/$1u/"
+  prism: luna_pinyin_simp
